@@ -5,6 +5,7 @@ def turn_count(board)
     if spot != " " && spot != "" && spot != nil 
       turn += 1 
     end
+  end
   turn
 end
 
