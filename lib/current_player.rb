@@ -1,10 +1,12 @@
 #Returns the number of turns that have elapsed from a given board
 def turn_count(board)
   turn = 0
-  board.each do |spot|
-    if spot == " X " || spot == " O "
+  count = 0 
+  while count < 9
+    if position_taken(board, count)
       turn += 1 
     end
+    count += 1
   end
   turn
 end
@@ -16,5 +18,14 @@ def current_player(board)
     "X"
   else
     "O"
+  end
+end
+
+def position_taken?(board, index)
+  spot = board[index]
+  if spot == " " || spot == "" || spot == nil
+    false 
+  else
+    true 
   end
 end
