@@ -1,12 +1,9 @@
 #Returns the number of turns that have elapsed from a given board
 def turn_count(board)
+  possible_empty = [" ", "", nil]
   turn = 0
-  count = 0 
-  while count < 9
-    if position_taken(board, count)
-      turn += 1 
-    end
-    count += 1
+  if spot != " " && spot != "" && spot != nil 
+    turn += 1 
   end
   turn
 end
